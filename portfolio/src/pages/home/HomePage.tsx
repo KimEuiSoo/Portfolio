@@ -1,9 +1,12 @@
 import React from "react";
+import clsN from 'classnames';
+import HomeTemplate from '../../components/templates/home/HomeTemplate';
+import styles from './styles/HomePage.module.scss';
 
 const HomePage = () => {
     return (
-        <div>
-            포토폴리오 홈
+        <div className={clsN(styles.home)}>
+            <HomeTemplate/>
         </div>
     )
 }

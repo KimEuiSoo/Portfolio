@@ -18,16 +18,6 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./src/*"],
-      "@api/*": ["./api/*"],
-      "@asset/*": ["./asset/*"],
-      "@components/*": ["./components/*"],
-      "@hooks/*": ["./hooks/*"],
-      "@interfaces/*": ["./interfaces/*"],
-      "@pages/*": ["./pages/*"],
-      "@recoil/*": ["./recoil/*"],
-      "@routes/*": ["./routes/*"],
-      "@styles/*": ["./styles/*"],
-      "@util/*": ["./util/*"]
     }
   },
   "include": [
