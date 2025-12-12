@@ -1,9 +1,15 @@
 import React from 'react';
+import clsN from 'classnames';
+import Profile from '../../organisms/Profile';
+import styles from './styles/HomeTemplate.module.scss'
 
 const HomeTemplate = () => {
     return (
-        <div>
-            홈페이지
+        <div className={clsN(styles["home-container"])}>
+            <Profile />
+            <div className={clsN(styles["home-container__career"])}>
+                <div/>
+            </div>
         </div>
     )
 }

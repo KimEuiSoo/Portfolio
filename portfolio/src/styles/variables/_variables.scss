@@ -64,8 +64,6 @@ $font-size-map: (
         caption: 0.75rem,
   // 10px
         overline: 0.625rem,
-  // for-icon
-        backgroundicon: 1.8rem
 );
 
 $font-weight-map: (
@@ -222,9 +220,6 @@ $google-background: #F2F2F2;
   --white-color: #{$white-color};
   --gray-color: #{$gray-color};
   --floaral-color: #{$floaral-color};
-
-  --icon-size-max: #{$icon-size-max};
-  --headerIcons-max: #{$headerIcons-max};
 
   --basic-font-color: #{$basic-font-color};
   --title-font-size-L: #{$title-font-size-L};
