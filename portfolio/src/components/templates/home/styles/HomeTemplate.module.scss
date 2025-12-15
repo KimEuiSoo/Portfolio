@@ -3,4 +3,13 @@
 .home-container{
   width: 100%;
   margin-top: 210px;
+  gap: 50px;
+
+  &__career{
+    display: flex;
+    margin-top: 150px;
+    background-color: $background-skyblue;
+    align-items: center;
+    padding: 32px 0;
+  }
 }

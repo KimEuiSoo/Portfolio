@@ -3,5 +3,4 @@ export const PROFILE = {
     job: 'Frontend Developer',
     title: '도전을 즐기는 개발자',
     content: '어렸을 때부터 프로그래밍에 관심을 가지면서 여러 가지 대회도 나가보면서 도전을 두려움 없이 새로운 기술을 배우면서 성장해 나가는 개발자로 성장하였습니다.\n학기 중에 휴학하고서 병역의 의무를 산업 기능 요원을 지원하면서 실무 경험을 쌓았습니다.',
-    image: '../../asset/images/kim.png'
 }
