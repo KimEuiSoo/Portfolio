@@ -5,7 +5,7 @@ import clsN from 'classnames';
 import Text from '../../atoms/text/Text';
 import styles from './styles/Card.module.scss'
 
-interface CardProps{
+interface CardProps extends MuiCardProps{
     title: string,
     date: string,
     position: string,
