@@ -5,11 +5,16 @@
   margin-top: 210px;
   gap: 50px;
 
-  &__career{
-    display: flex;
-    margin-top: 100px;
+  &__careerSection{
+    width: 100%;
     background-color: $background-skyblue;
-    align-items: center;
+  }
+
+  &__career, &__profile{
+    display: flex;
+    width: 76%;
+    margin: 0 12% 100px 12%;
+    align-items: center;;
     padding: 32px 0;
   }
 }
