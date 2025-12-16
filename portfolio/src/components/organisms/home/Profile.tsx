@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import clsN from 'classnames';
-import { PROFILE } from '../../util/profile/Profile';
-import Text from '../atoms/text/Text';
-import KimImage from '../../asset/images/kim.png';
+import { PROFILE } from '../../../util/profile/Profile';
+import Text from '../../atoms/text/Text';
+import KimImage from '../../../asset/images/kim.png';
 import styles from './styles/Profile.module.scss';
 
 const Profile = () => {

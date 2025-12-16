@@ -1,7 +1,8 @@
 import React from 'react';
 import clsN from 'classnames';
-import Profile from '../../organisms/Profile';
-import Career from '../../organisms/Career';
+import Profile from '../../organisms/home/Profile';
+import Career from '../../organisms/home/Career';
+import Feature from '../../organisms/home/Feature';
 import styles from './styles/HomeTemplate.module.scss';
 
 const HomeTemplate = () => {
@@ -15,6 +16,9 @@ const HomeTemplate = () => {
                     <Career />
                 </div>
             </section>
+            <div className={clsN(styles['home-container__feature'])}>
+                <Feature />
+            </div>
         </div>
     );
 };

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import clsN from 'classnames';
-import Text from '../atoms/text/Text';
-import { CAREER } from '../../util/profile/Career';
-import Card from '../molecules/card/Card';
+import Text from '../../atoms/text/Text';
+import { CAREER } from '../../../util/profile/Career';
+import Card from '../../molecules/card/Card';
 import styles from './styles/Career.module.scss';
 
 const Career = () => {
@@ -21,6 +21,7 @@ const Career = () => {
                         content={career.content}
                         className={styles['career-wrapper__card']}
                         contentClsN={styles['career-wrapper__card-content']}
+                        variant='outlined'
                     />
                 ))}
             </Box>
