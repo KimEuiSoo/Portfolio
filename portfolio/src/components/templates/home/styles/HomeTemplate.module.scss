@@ -1,0 +1,20 @@
+@import "../../../../styles/variables/index";
+
+.home-container{
+  width: 100%;
+  margin-top: 210px;
+  gap: 50px;
+
+  &__careerSection{
+    width: 100%;
+    background-color: $background-skyblue;
+  }
+
+  &__career, &__profile{
+    display: flex;
+    width: 76%;
+    margin: 0 12% 100px 12%;
+    align-items: center;;
+    padding: 32px 0;
+  }
+}

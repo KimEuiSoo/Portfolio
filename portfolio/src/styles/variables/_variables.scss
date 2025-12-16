@@ -64,8 +64,6 @@ $font-size-map: (
         caption: 0.75rem,
   // 10px
         overline: 0.625rem,
-  // for-icon
-        backgroundicon: 1.8rem
 );
 
 $font-weight-map: (
@@ -155,7 +153,7 @@ $color-text-orange: #FF9900;
 $background-white: #FFFFFF;
 $background-ghostwhite: #fafafa;
 $background-lightgray: #EEEEEE;
-$background-skyblue: #b5d1ff;
+$background-skyblue: #EDF7FA;
 $background-cornflowerblue: #5981BE;
 $background-navy: #1A2D49;
 $background-dimgray: #464646;
@@ -222,9 +220,6 @@ $google-background: #F2F2F2;
   --white-color: #{$white-color};
   --gray-color: #{$gray-color};
   --floaral-color: #{$floaral-color};
-
-  --icon-size-max: #{$icon-size-max};
-  --headerIcons-max: #{$headerIcons-max};
 
   --basic-font-color: #{$basic-font-color};
   --title-font-size-L: #{$title-font-size-L};
