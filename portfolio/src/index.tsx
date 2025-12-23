@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import { StyledEngineProvider } from '@mui/material';
 import App from './App';
@@ -12,11 +12,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
     <StyledEngineProvider injectFirst>
-        <BrowserRouter>
+        <HashRouter>
             <RecoilRoot>
                 <App />
             </RecoilRoot>
-        </BrowserRouter>
+        </HashRouter>
     </StyledEngineProvider>,
 );
 
