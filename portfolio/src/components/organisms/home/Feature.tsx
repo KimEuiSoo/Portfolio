@@ -2,11 +2,11 @@ import React from 'react';
 import { Box } from '@mui/material';
 import clsN from 'classnames';
 import Text from '../../atoms/text/Text';
-import { CAREER } from '../../../util/profile/Career';
 import Card from '../../molecules/card/Card';
+import { Career as Careers } from '../../../types/tpyes';
 import styles from './styles/Feature.module.scss'
 
-const Feature = () => {
+const Feature = ({career}: {career: Careers}) => {
     return(
         <Box className={clsN(styles['feature-wrapper'])}>
             <Box className={clsN(styles['feature-header'])}>
@@ -14,7 +14,7 @@ const Feature = () => {
             </Box>
 
             <Box className={clsN(styles['feature-wrapper__list'])}>
-                {CAREER[0]?.project?.map((project) => (
+                {career?.projects?.map((project) => (
                     <Card
                         key={project.name}
                         title={project.name}

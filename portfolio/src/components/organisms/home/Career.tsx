@@ -2,20 +2,20 @@ import React from 'react';
 import { Box } from '@mui/material';
 import clsN from 'classnames';
 import Text from '../../atoms/text/Text';
-import { CAREER } from '../../../util/profile/Career';
+import { Career as Careers } from '../../../types/tpyes';
 import Card from '../../molecules/card/Card';
 import styles from './styles/Career.module.scss';
 
-const Career = () => {
+const Career = ({careers}: {careers: Careers[]}) => {
     return(
         <Box className={clsN(styles['career-wrapper'])}>
             <Box className={clsN(styles['career-wrapper__title'])}>
                 <Text text='Career' variant='h6'/>
             </Box>
             <Box className={clsN(styles['career-wrapper__list'])}>
-                {CAREER.slice(0,2).map((career) => (
+                {careers.slice(0,2).map((career) => (
                     <Card
-                        title={career.career}
+                        title={career.name}
                         date={career.date}
                         position={career.position}
                         content={career.content}
