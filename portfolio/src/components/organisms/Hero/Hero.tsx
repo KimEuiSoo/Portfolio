@@ -4,8 +4,15 @@ import Button from '../../atoms/button/Button';
 import styles from './styles/Hero.module.scss'
 import Text from '../../atoms/text/Text';
 import Memoji from '../../../asset/images/memoji.png';
+import { Profile, Project } from '../../../types/tpyes';
 
-const Hero = ({ onClick }: { onClick: () => void }) => {
+
+const Hero = ({ onClick, profile, onBlogClick, onGithubClick }: {
+    onClick: () => void
+    profile: Profile
+    onBlogClick?: (profile: Profile) => void;
+    onGithubClick?: (profile: Profile) => void;
+}) => {
     return (
         <section className={styles.hero}>
             <div className={styles.inner}>
@@ -15,8 +22,8 @@ const Hero = ({ onClick }: { onClick: () => void }) => {
                     <p>방문해 주셔서 감사합니다.</p>
 
                     <div className={styles.links}>
-                        <Button>GitHub</Button>
-                        <Button>Blog</Button>
+                        <Button onClick={()=>onGithubClick && onGithubClick(profile)}>GitHub</Button>
+                        <Button onClick={()=>onBlogClick && onBlogClick(profile)}>Blog</Button>
                     </div>
                 </div>
 

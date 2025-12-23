@@ -34,7 +34,7 @@ const HomePage = () => {
 
     return (
         <div className={clsN(styles.home)}>
-            <PageTransition>
+            <PageTransition profile={profiles[0]}>
                 <HomeTemplate profile={profiles[0]} careers={careers}/>
             </PageTransition>
         </div>

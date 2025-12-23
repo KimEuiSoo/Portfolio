@@ -2,13 +2,25 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Hero from '../organisms/Hero/Hero';
+import { Profile as Profiles, Project } from '../../types/tpyes';
 
-interface PageTransitionProps{
+interface PageTransitionProps {
     children: React.ReactNode;
+    profile: Profiles;
 }
 
-const PageTransition = ({children}: PageTransitionProps) => {
+const PageTransition = ({ children, profile }: PageTransitionProps) => {
     const [open, setOpen] = useState(false);
+
+    const onBlogClick = (profile: Profiles) => {
+        if (!profile) return;
+        window.open(profile.blog, '_blank', 'noopener,noreferrer');
+    };
+
+    const onGithubClick = (profile: Profiles) => {
+        if (!profile) return;
+        window.open(profile.github, '_blank', 'noopener,noreferrer');
+    };
 
     return (
         <AnimatePresence mode="wait">
@@ -24,7 +36,10 @@ const PageTransition = ({children}: PageTransitionProps) => {
                     transition={{ duration: 0.8, ease: 'easeInOut' }}
                     style={{ transformOrigin: 'left center' }}
                 >
-                    <Hero onClick={() => setOpen(true)} />
+                    <Hero onClick={() => setOpen(true)} profile={profile}
+                          onBlogClick={(profile) => onBlogClick(profile)}
+                          onGithubClick={(profile) => onGithubClick(profile)}
+                    />
                 </motion.div>
             ) : (
                 <motion.div
