@@ -2,19 +2,18 @@
 
 .home-container{
   width: 100%;
-  margin-top: 210px;
-  gap: 50px;
+  margin: 210px 0;
 
   &__careerSection{
     width: 100%;
     background-color: $background-skyblue;
+    margin-top: 100px;
   }
 
-  &__career, &__profile{
+  &__career, &__profile, &__feature{
     display: flex;
     width: 76%;
-    margin: 0 12% 100px 12%;
-    align-items: center;;
-    padding: 32px 0;
+    padding: 32px 12%;
+    align-items: center;
   }
 }

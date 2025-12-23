@@ -1,0 +1,75 @@
+@import '../../../../styles/variables/index';
+
+.feature-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  gap: 20px; /* 제목과 카드 사이 간격 */
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__card{
+    display: flex;
+    border: none !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    border-radius: 0 !important;
+
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
+
+  &__media{
+    width: 260px;
+    height: 180px;
+    flex-shrink: 0;
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+    gap: 12px;
+
+    /* title */
+    > :nth-child(1) {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    /* date badge */
+    > :nth-child(2) {
+      width: fit-content;
+      background: #1f2937;
+      color: white;
+      font-size: 14px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    /* position */
+    > :nth-child(3) {
+      font-size: 16px;
+      color: #6b7280;
+    }
+
+    /* description */
+    > :nth-child(4) {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #374151;
+    }
+  }
+}
+
+.feature-header{
+  h6{
+    font-weight: 500;
+  }
+}

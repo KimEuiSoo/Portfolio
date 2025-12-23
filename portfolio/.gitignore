@@ -23,3 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 /src/asset/images/kim.png
 /src/asset/images/memoji.png
+/.env
