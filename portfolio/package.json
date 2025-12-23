@@ -20,6 +20,7 @@
     "eslint-plugin-unused-imports": "^2.0.0",
     "firebase": "^12.6.0",
     "framer-motion": "^12.23.26",
+    "gh-pages": "^6.3.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "react-router-dom": "^7.10.1",
@@ -36,7 +37,9 @@
     "eject": "react-scripts eject",
     "prettier": "prettier --write --config ./.prettierrc \"**/*.{ts,tsx}\"",
     "lint": "eslint './src/**/*.{ts,tsx}'",
-    "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'"
+    "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -71,5 +74,6 @@
     "eslint-prettier": "^0.0.0-empty",
     "globals": "^16.5.0",
     "prettier": "^3.7.4"
-  }
+  },
+  "homepage": "https://kimeuisoo.github.io/Portfolio/"
 }
