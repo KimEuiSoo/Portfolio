@@ -1,5 +1,174 @@
 @import '../../../styles/variables/index';
 
-.header-wrapper{
+.header-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 24px 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
+  // Desktop menu
+  &__desktop {
+    display: flex;
+    gap: 16px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Mobile toggle button
+  &__mobile-toggle {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+
+  // Button styles
+  &__button {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    color: #333;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    // Hover effect
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    // Active/Click effect
+    &:active {
+      transform: translateY(0);
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    // Ripple effect
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.1);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    &:active::before {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  // Tablet responsive
+  @media (max-width: 1024px) {
+    padding: 20px 60px;
+  }
+
+  // Mobile responsive
+  @media (max-width: 768px) {
+    padding: 16px 24px;
+  }
+}
+
+// Mobile drawer styles
+.mobile-drawer {
+  :global(.MuiDrawer-paper) {
+    width: 280px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+}
+
+.mobile-menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+
+  &__close {
+    align-self: flex-end;
+    color: white;
+    margin-bottom: 32px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__button {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 24px;
+    color: white;
+    text-align: left;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    // Hover effect
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      transform: translateX(8px);
+      padding-left: 32px;
+    }
+
+    // Active/Click effect
+    &:active {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: translateX(4px);
+    }
+
+    // Slide in animation
+    animation: slideIn 0.3s ease forwards;
+    opacity: 0;
+
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
