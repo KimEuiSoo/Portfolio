@@ -1,0 +1,14 @@
+@import '../../../styles/variables/index';
+
+.career{
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 가로 가운데 */
+  font-family: "Pretendard-Variable", serif;
+  font-weight: 500;
+
+  * {
+    font-family: inherit;
+    font-weight: inherit;
+  }
+}
