@@ -12,7 +12,7 @@ const CareerPage = () => {
 
     return(
         <Box className={clsN(styles.career)}>
-            <div/>
+            'Career'
         </Box>
     )
 }

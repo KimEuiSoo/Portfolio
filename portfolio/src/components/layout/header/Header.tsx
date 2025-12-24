@@ -35,7 +35,7 @@ const Header = ({ profile, onBlogClick, onNavigationClick }: HeaderProps) => {
                     <Button
                         className={clsN(styles['header-wrapper__button'])}
                         variant='text'
-                        onClick={() => onNavigationClick('work')}
+                        onClick={() => onNavigationClick('/work')}
                     >
                         {'Work'}
                     </Button>
@@ -49,7 +49,7 @@ const Header = ({ profile, onBlogClick, onNavigationClick }: HeaderProps) => {
                     <Button
                         className={clsN(styles['header-wrapper__button'])}
                         variant='text'
-                        onClick={() => onNavigationClick('career')}
+                        onClick={() => onNavigationClick('/career')}
                     >
                         {'Career'}
                     </Button>
@@ -85,7 +85,7 @@ const Header = ({ profile, onBlogClick, onNavigationClick }: HeaderProps) => {
                         <Button
                             className={clsN(styles['mobile-menu__button'])}
                             variant='text'
-                            onClick={() => handleNavigationClick('work')}
+                            onClick={() => handleNavigationClick('/work')}
                         >
                             {'Work'}
                         </Button>
@@ -99,7 +99,7 @@ const Header = ({ profile, onBlogClick, onNavigationClick }: HeaderProps) => {
                         <Button
                             className={clsN(styles['mobile-menu__button'])}
                             variant='text'
-                            onClick={() => handleNavigationClick('career')}
+                            onClick={() => handleNavigationClick('/career')}
                         >
                             {'Career'}
                         </Button>

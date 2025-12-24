@@ -12,7 +12,7 @@ const WorkPage = () => {
 
     return(
         <Box className={clsN(styles.work)}>
-            <div/>
+            'Work'
         </Box>
     )
 }

@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Hero from '../organisms/Hero/Hero';
 import { Profile as Profiles, Project } from '../../types/tpyes';
+import { useRecoilState } from 'recoil';
+import { initAtom } from '../../recoil/atoms/initAtom';
 
 interface PageTransitionProps {
     children: React.ReactNode;
@@ -10,7 +12,7 @@ interface PageTransitionProps {
 }
 
 const PageTransition = ({ children, profile }: PageTransitionProps) => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useRecoilState(initAtom);
 
     const onBlogClick = (profile: Profiles) => {
         if (!profile) return;

@@ -6,9 +6,11 @@ import Footer from './footer/Footer';
 import { useRecoilValue } from 'recoil';
 import { profileAtom } from '../../recoil/atoms/profileAtom';
 import { Profile as Profiles } from '../../types/tpyes';
+import { useNavigate } from 'react-router-dom';
 
 const Layout = ({children}: {children: React.ReactNode}) => {
     const profile = useRecoilValue(profileAtom);
+    const navigate = useNavigate();
 
     const onBlogClick = (profile: Profiles) => {
         if (!profile) return;
@@ -17,6 +19,7 @@ const Layout = ({children}: {children: React.ReactNode}) => {
 
     const onNavigationHandle = (navigator: string) => {
         console.log({ navigator });
+        navigate(navigator);
     }
     return(
         <Box>
