@@ -22,35 +22,43 @@
       border-bottom: none !important;
     }
 
-    // CardActionArea를 가로 배치로 변경
-    .MuiCardActionArea-root,
-    div[class*="MuiCardActionArea"],
-    > div:first-child {
+    // CardActionArea의 모든 직계 자식 div에 스타일 적용
+    :global(.MuiCardActionArea-root) {
       display: flex !important;
       flex-direction: row !important;
-      align-items: flex-start !important;
+      align-items: stretch !important; // PC에서 높이 맞춤
       gap: 30px !important;
+      padding: 0 !important;
 
       /* 태블릿 이하 */
       @media (max-width: 900px) {
         flex-direction: column !important;
         gap: 20px !important;
+        align-items: flex-start !important; // 모바일에서는 flex-start
+      }
+
+      // CardActionArea 내부의 focusHighlight 비활성화
+      :global(.MuiCardActionArea-focusHighlight) {
+        background: transparent !important;
       }
     }
   }
 
   &__media{
     width: 260px !important;
-    height: 180px !important;
+    height: auto !important; // auto로 변경하여 콘텐츠 높이에 맞춤
     min-width: 260px;
     flex-shrink: 0 !important;
     border-radius: 8px;
+    object-fit: cover;
+    align-self: stretch; // 부모의 높이에 맞춤
 
     /* 태블릿 이하 */
     @media (max-width: 900px) {
       width: 100% !important;
       min-width: 100%;
-      height: 250px !important;
+      height: 250px !important; // 모바일에서는 고정 높이
+      align-self: auto;
     }
 
     /* 모바일 */
@@ -69,18 +77,18 @@
 
     /* title */
     > :nth-child(1) {
-      font-size: 30px !important;
+      font-size: 24px !important;
       font-weight: 700 !important;
       line-height: 1.3 !important;
       color: #1f2937 !important;
       margin: 0 !important;
 
       @media (max-width: 768px) {
-        font-size: 26px !important;
+        font-size: 22px !important;
       }
 
       @media (max-width: 600px) {
-        font-size: 22px !important;
+        font-size: 20px !important;
       }
     }
 
@@ -129,13 +137,13 @@
       text-overflow: ellipsis !important;
 
       @media (max-width: 900px) {
-        -webkit-line-clamp: 6 !important; /* 태블릿에서 6줄 */
+        -webkit-line-clamp: 6 !important;
       }
 
       @media (max-width: 600px) {
         font-size: 15px !important;
         line-height: 1.7 !important;
-        -webkit-line-clamp: 4 !important; /* 모바일에서 4줄 */
+        -webkit-line-clamp: 4 !important;
       }
     }
   }
@@ -146,7 +154,7 @@
 
   h6{
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 600;
     color: #21243d;
 
     @media (max-width: 600px) {

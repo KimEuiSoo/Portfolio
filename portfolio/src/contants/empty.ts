@@ -28,4 +28,5 @@ export const EMPTY_PROJECT = <Project>{
     position:'',
     content:'',
     url:'',
+    images: {},
 }
