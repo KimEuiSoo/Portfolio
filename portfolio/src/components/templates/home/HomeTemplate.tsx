@@ -6,10 +6,10 @@ import Feature from '../../organisms/home/Feature';
 import { Career as Careers, Profile as Profiles, Project } from '../../../types/tpyes';
 import styles from './styles/HomeTemplate.module.scss';
 
-const HomeTemplate = ({profile, careers}: {
+const HomeTemplate = ({profile, careers, onDownload}: {
     profile: Profiles
     careers: Careers[]
-
+    onDownload: ()=>void;
 }) => {
 
     const onClick = (project: Project) => {
@@ -20,7 +20,7 @@ const HomeTemplate = ({profile, careers}: {
     return (
         <div className={clsN(styles['home-container'])}>
             <div className={clsN(styles['home-container__profile'])}>
-                <Profile profile={profile}/>
+                <Profile profile={profile} onDownload={onDownload}/>
             </div>
             <section className={clsN(styles['home-container__careerSection'])}>
                 <div className={clsN(styles['home-container__career'])}>

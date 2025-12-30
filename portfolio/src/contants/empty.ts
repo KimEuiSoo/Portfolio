@@ -8,7 +8,10 @@ export const EMPTY_PROFILE = <Profile>{
     email: '',
     github: '',
     blog: '',
-    phone: ''
+    phone: '',
+    imageUrl: '',
+    memojiUrl: '',
+    resumeUrl: ''
 }
 
 export const EMPTY_CAREER = <Career>{

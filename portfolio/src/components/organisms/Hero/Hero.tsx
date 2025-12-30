@@ -3,7 +3,6 @@ import React from 'react';
 import Button from '../../atoms/button/Button';
 import styles from './styles/Hero.module.scss'
 import Text from '../../atoms/text/Text';
-import Memoji from '../../../asset/images/memoji.png';
 import { Profile, Project } from '../../../types/tpyes';
 
 
@@ -29,7 +28,7 @@ const Hero = ({ onClick, profile, onBlogClick, onGithubClick }: {
 
                 {/* 오른쪽 이미지 */}
                 <div className={styles.imageArea}>
-                    <img src={Memoji} alt="profile" />
+                    <img src={profile.memojiUrl} alt="profile" />
                 </div>
             </div>
 

@@ -15,7 +15,7 @@ const Feature = ({career, onProjectClick}: FeatureProps) => {
     return(
         <Box className={clsN(styles['feature-wrapper'])}>
             <Box className={clsN(styles['feature-header'])}>
-                <Text text="Featured works" variant="h6" />
+                <Text text="My Project" variant="h6" />
             </Box>
 
             <Box className={clsN(styles['feature-wrapper__list'])}>

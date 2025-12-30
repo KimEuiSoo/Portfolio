@@ -27,7 +27,7 @@ const Layout = ({children}: {children: React.ReactNode}) => {
                     onBlogClick={(profile) => onBlogClick(profile)}
                     onNavigationClick={(navigator)=>onNavigationHandle(navigator)}/>
             <main>{children}</main>
-            <Footer/>
+            <Footer profile={profile}/>
         </Box>
     )
 }
