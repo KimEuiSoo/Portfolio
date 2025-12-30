@@ -28,4 +28,7 @@ export interface Profile extends BaseEntity {
     github: string;
     blog: string;
     phone: string;
+    imageUrl: string;
+    memojiUrl: string;
+    resumeUrl: string;
 }

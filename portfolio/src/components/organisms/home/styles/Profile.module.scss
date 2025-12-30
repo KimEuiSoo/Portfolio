@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 40px;
 
   /* 모바일 - 세로 배치로 변경 */
   @media (max-width: 768px) {
@@ -13,16 +14,45 @@
     gap: 24px;
   }
 
+  &__image{
+    width: 25%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-shrink: 0;
+    order: 2; /* 데스크탑에서 오른쪽 */
+
+    /* 모바일 */
+    @media (max-width: 768px) {
+      width: 200px;
+      order: 1; /* 이미지를 먼저 배치 */
+    }
+
+    @media (max-width: 480px) {
+      width: 160px;
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   &__main {
-    width: 70%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    order: 1; /* 데스크탑에서 왼쪽 */
 
     /* 모바일 */
     @media (max-width: 768px) {
       width: 100%;
       order: 2; /* 이미지 다음에 배치 */
+      align-items: center;
     }
   }
 
@@ -74,9 +104,26 @@
     }
   }
 
+  &__job {
+    /* Creative Technologist */
+    font-size: 46px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+
+    @media (max-width: 768px) {
+      font-size: 32px !important;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 24px !important;
+    }
+  }
+
   &__content {
-    line-height: 1.6;
+    line-height: 1.8;
     font-size: 16px;
+    color: #666;
+    margin-top: 8px;
 
     @media (max-width: 768px) {
       font-size: 15px;
@@ -88,29 +135,33 @@
     }
   }
 
-  &__image{
-    width: 20%;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
-    display: flex;
-    flex-shrink: 0;
+  &__button {
+    background-color: #ff6b6b !important;
+    color: white !important;
+    padding: 12px 32px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    text-transform: none !important;
+    margin-top: 16px !important;
+    align-self: flex-start;
+    transition: all 0.3s ease !important;
 
-    /* 모바일 */
+    &:hover {
+      background-color: #ff5252 !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3) !important;
+    }
+
     @media (max-width: 768px) {
-      width: 200px;
-      order: 1; /* 이미지를 먼저 배치 */
+      align-self: center;
+      padding: 10px 28px !important;
+      font-size: 15px !important;
     }
 
     @media (max-width: 480px) {
-      width: 160px;
-    }
-
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      padding: 10px 24px !important;
+      font-size: 14px !important;
     }
   }
 }
