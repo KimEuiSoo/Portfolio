@@ -27,7 +27,7 @@ const Feature = ({career, onProjectClick}: FeatureProps) => {
                         position={project.position}
                         content={project.content}
                         onClick={()=>onProjectClick && onProjectClick(project)}
-                        imgPath="https://placehold.co/600x400"
+                        imgPath={project.images[0]}
                         className={clsN(styles['feature-wrapper__card'])}
                         mediaClsN={clsN(styles['feature-wrapper__media'])}
                         contentClsN={clsN(styles['feature-wrapper__content'])}

@@ -17,6 +17,7 @@ export interface Project extends BaseEntity {
     position: string;
     content: string;
     url: string;
+    images: string[];
 }
 
 export interface Profile extends BaseEntity {
