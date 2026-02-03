@@ -1,17 +1,17 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import { Career } from '../../../types/tpyes';
+import SwiperList from '../../organisms/common/SwiperList';
 
 interface WorkTemplateProps{
     careers: Career[]
 }
 
 const WorkTemplate = ({careers}: WorkTemplateProps) => {
-    console.log(careers);
 
     return(
         <Box>
-            <div/>
+            <SwiperList items={careers}/>
         </Box>
     )
 }
