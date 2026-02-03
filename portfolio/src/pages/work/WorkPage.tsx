@@ -3,16 +3,16 @@ import { Box } from '@mui/material';
 import clsN from 'classnames';
 import { useRecoilValue } from 'recoil';
 import { careerAtom } from '../../recoil/atoms/profileAtom';
+import WorkTemplate from '../../components/templates/work/WorkTemplate';
 import styles from './styles/WorkPage.module.scss'
 
 const WorkPage = () => {
     const careers = useRecoilValue(careerAtom)
 
-    console.log(careers);
 
     return(
         <Box className={clsN(styles.work)}>
-            'Work'
+            <WorkTemplate careers={careers}/>
         </Box>
     )
 }
